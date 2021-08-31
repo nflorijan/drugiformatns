@@ -1,0 +1,21 @@
+.c-card-section {
+  @include container;
+  display: flex;
+}
+
+.c-card {
+  max-width: 300px;
+  width: 100%;
+  @include flex-column-center;
+  padding: 20px;
+  border: 1px solid $color__black;
+  border-radius: 8px;
+  text-align: center;
+  margin: 5px;
+}
+
+.c-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

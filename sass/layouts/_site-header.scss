@@ -1,0 +1,7 @@
+.site-header {
+  background-color: $color__black;
+}
+
+.site-header__wrap {
+  @include container;
+}

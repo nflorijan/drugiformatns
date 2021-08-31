@@ -13,3 +13,36 @@ function my_acf_json_save_point( $path ) {
     return $path;
 }
 
+/**
+ * Blocks
+ */
+add_action('acf/init', 'my_acf_init_block_types');
+function my_acf_init_block_types() {
+
+    // Check function exists.
+    if( function_exists('acf_register_block_type') ) {
+
+        // register a hero block.
+        acf_register_block_type(array(
+            'name'              => 'hero',
+            'title'             => __('Hero'),
+            'description'       => __('A custom theme block.'),
+            'render_template'   => 'template-parts/blocks/hero.php',
+            'category'          => 'formatting',
+            'align'             => 'full',
+            'keywords'          => array( 'hero', 'block' ),
+        ));
+
+        // register a Members block.
+        acf_register_block_type(array(
+            'name'              => 'members',
+            'title'             => __('Members'),
+            'description'       => __('A custom theme block.'),
+            'render_template'   => 'template-parts/blocks/members.php',
+            'category'          => 'formatting',
+            'align'             => 'full',
+            'keywords'          => array( 'hero', 'block' ),
+        ));
+    }
+}
+

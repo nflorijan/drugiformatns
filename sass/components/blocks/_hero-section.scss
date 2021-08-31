@@ -1,0 +1,7 @@
+.c-hero-section {
+  @include container;
+  
+  h1 {
+    color: red;
+  }
+}
